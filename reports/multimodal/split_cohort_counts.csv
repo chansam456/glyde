@@ -1,0 +1,4 @@
+split,healthy,prediabetes,type2_diabetes
+test,2,3,2
+train,10,11,10
+validation,3,2,2

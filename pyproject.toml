@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "glucolens"
+version = "0.1.0"
+description = "Leakage-aware multimodal postprandial glucose forecasting"
+requires-python = ">=3.11"
+dependencies = ["torch>=2.2", "torchvision>=0.17", "numpy>=1.26", "pandas>=2.2", "scikit-learn>=1.4", "Pillow>=10", "streamlit>=1.40"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+glucolens = "glucolens.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]

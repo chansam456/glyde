@@ -1,0 +1,145 @@
+{
+  "version": "v1 nutrient model",
+  "seed": 42,
+  "split": {
+    "train": [
+      1,
+      3,
+      4,
+      5,
+      7,
+      8,
+      11,
+      12,
+      13,
+      14,
+      16,
+      17,
+      19,
+      21,
+      22,
+      23,
+      27,
+      28,
+      29,
+      31,
+      32,
+      33,
+      35,
+      36,
+      38,
+      41,
+      42,
+      43,
+      44,
+      48,
+      49
+    ],
+    "validation": [
+      2,
+      10,
+      15,
+      26,
+      30,
+      34,
+      39
+    ],
+    "test": [
+      6,
+      9,
+      18,
+      20,
+      45,
+      46,
+      47
+    ]
+  },
+  "split_meals": {
+    "train": 923,
+    "validation": 212,
+    "test": 207
+  },
+  "selected_model": "extra_trees",
+  "validation": {
+    "ridge": {
+      "trajectory_mae_mg_dl": 30.621919631958008,
+      "trajectory_rmse_mg_dl": 45.62801742553711,
+      "peak_mae_mg_dl": 37.07642364501953,
+      "peak_within_20_mg_dl_pct": 45.75471698113208,
+      "peak_time_mae_minutes": 27.216981132075475,
+      "meals": 212
+    },
+    "extra_trees": {
+      "trajectory_mae_mg_dl": 27.57352049194624,
+      "trajectory_rmse_mg_dl": 40.37135820281474,
+      "peak_mae_mg_dl": 34.37436887543141,
+      "peak_within_20_mg_dl_pct": 49.528301886792455,
+      "peak_time_mae_minutes": 29.504716981132077,
+      "meals": 212
+    }
+  },
+  "test": {
+    "ridge": {
+      "trajectory_mae_mg_dl": 27.803112030029297,
+      "trajectory_rmse_mg_dl": 38.45294952392578,
+      "peak_mae_mg_dl": 33.717132568359375,
+      "peak_within_20_mg_dl_pct": 44.44444444444444,
+      "peak_time_mae_minutes": 34.15458937198068,
+      "meals": 207
+    },
+    "extra_trees": {
+      "trajectory_mae_mg_dl": 25.78593115081017,
+      "trajectory_rmse_mg_dl": 35.28208124599685,
+      "peak_mae_mg_dl": 31.213459676909142,
+      "peak_within_20_mg_dl_pct": 43.96135265700483,
+      "peak_time_mae_minutes": 33.526570048309175,
+      "meals": 207
+    },
+    "persistence": {
+      "trajectory_mae_mg_dl": 32.75482940673828,
+      "trajectory_rmse_mg_dl": 46.624088287353516,
+      "peak_mae_mg_dl": 55.59516906738281,
+      "peak_within_20_mg_dl_pct": 20.77294685990338,
+      "peak_time_mae_minutes": 73.91304347826087,
+      "meals": 207
+    },
+    "population_response": {
+      "trajectory_mae_mg_dl": 28.61387825012207,
+      "trajectory_rmse_mg_dl": 39.14903259277344,
+      "peak_mae_mg_dl": 35.09033966064453,
+      "peak_within_20_mg_dl_pct": 42.99516908212561,
+      "peak_time_mae_minutes": 36.666666666666664,
+      "meals": 207
+    },
+    "glucose_only_ridge": {
+      "trajectory_mae_mg_dl": 28.779966354370117,
+      "trajectory_rmse_mg_dl": 39.3870964050293,
+      "peak_mae_mg_dl": 36.32439041137695,
+      "peak_within_20_mg_dl_pct": 43.96135265700483,
+      "peak_time_mae_minutes": 34.95169082125604,
+      "meals": 207
+    }
+  },
+  "training_evaluation_seconds": 0.2885047079762444,
+  "feature_order": [
+    "Carbs",
+    "Protein",
+    "Fat",
+    "Fiber",
+    "starting_glucose_mg_dl"
+  ],
+  "training_feature_min": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    40.0
+  ],
+  "training_feature_max": [
+    282.0,
+    148.0,
+    110.0,
+    100.0,
+    319.0
+  ]
+}

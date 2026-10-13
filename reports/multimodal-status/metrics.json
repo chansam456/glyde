@@ -1,0 +1,242 @@
+{
+  "seed": 42,
+  "split": {
+    "train": [
+      1,
+      3,
+      4,
+      5,
+      7,
+      8,
+      11,
+      12,
+      13,
+      14,
+      16,
+      17,
+      19,
+      21,
+      22,
+      23,
+      27,
+      28,
+      29,
+      31,
+      32,
+      33,
+      35,
+      36,
+      38,
+      41,
+      42,
+      43,
+      44,
+      48,
+      49
+    ],
+    "validation": [
+      2,
+      10,
+      15,
+      26,
+      30,
+      34,
+      39
+    ],
+    "test": [
+      6,
+      9,
+      18,
+      20,
+      45,
+      46,
+      47
+    ]
+  },
+  "split_meals": {
+    "train": 923,
+    "validation": 212,
+    "test": 207
+  },
+  "profile": "quick",
+  "architecture": {
+    "image_dim": 1280,
+    "hidden": 48,
+    "layers": 1,
+    "context_dim": 1
+  },
+  "uses_diabetes_flag": true,
+  "epochs_run": 17,
+  "best_epoch": 2,
+  "selected_food_model": "food_trees",
+  "validation": {
+    "food_ridge": {
+      "trajectory_mae_mg_dl": 30.621919631958008,
+      "trajectory_rmse_mg_dl": 45.62801742553711,
+      "peak_mae_mg_dl": 37.07642364501953,
+      "peak_within_20_mg_dl_pct": 45.75471698113208,
+      "peak_time_mae_minutes": 27.216981132075475,
+      "meals": 212
+    },
+    "food_trees": {
+      "trajectory_mae_mg_dl": 27.57352049194624,
+      "trajectory_rmse_mg_dl": 40.37135820281474,
+      "peak_mae_mg_dl": 34.37436887543141,
+      "peak_within_20_mg_dl_pct": 49.528301886792455,
+      "peak_time_mae_minutes": 29.504716981132077,
+      "meals": 212
+    },
+    "image_lstm": {
+      "trajectory_mae_mg_dl": 30.128257751464844,
+      "trajectory_rmse_mg_dl": 44.54833984375,
+      "peak_mae_mg_dl": 35.206382751464844,
+      "peak_within_20_mg_dl_pct": 44.339622641509436,
+      "peak_time_mae_minutes": 34.4811320754717,
+      "meals": 212
+    }
+  },
+  "test": {
+    "persistence": {
+      "trajectory_mae_mg_dl": 32.75482940673828,
+      "trajectory_rmse_mg_dl": 46.624088287353516,
+      "peak_mae_mg_dl": 55.59516906738281,
+      "peak_within_20_mg_dl_pct": 20.77294685990338,
+      "peak_time_mae_minutes": 73.91304347826087,
+      "meals": 207
+    },
+    "population_response": {
+      "trajectory_mae_mg_dl": 28.61387825012207,
+      "trajectory_rmse_mg_dl": 39.14903259277344,
+      "peak_mae_mg_dl": 35.09033966064453,
+      "peak_within_20_mg_dl_pct": 42.99516908212561,
+      "peak_time_mae_minutes": 36.666666666666664,
+      "meals": 207
+    },
+    "history_ridge": {
+      "trajectory_mae_mg_dl": 28.647321701049805,
+      "trajectory_rmse_mg_dl": 39.199851989746094,
+      "peak_mae_mg_dl": 36.415321350097656,
+      "peak_within_20_mg_dl_pct": 42.51207729468599,
+      "peak_time_mae_minutes": 34.8792270531401,
+      "meals": 207
+    },
+    "food_ridge": {
+      "trajectory_mae_mg_dl": 27.803112030029297,
+      "trajectory_rmse_mg_dl": 38.45294952392578,
+      "peak_mae_mg_dl": 33.717132568359375,
+      "peak_within_20_mg_dl_pct": 44.44444444444444,
+      "peak_time_mae_minutes": 34.15458937198068,
+      "meals": 207
+    },
+    "food_trees": {
+      "trajectory_mae_mg_dl": 25.78593115081017,
+      "trajectory_rmse_mg_dl": 35.28208124599685,
+      "peak_mae_mg_dl": 31.213459676909142,
+      "peak_within_20_mg_dl_pct": 43.96135265700483,
+      "peak_time_mae_minutes": 33.526570048309175,
+      "meals": 207
+    },
+    "image_lstm": {
+      "trajectory_mae_mg_dl": 28.51449203491211,
+      "trajectory_rmse_mg_dl": 38.66950607299805,
+      "peak_mae_mg_dl": 33.73338317871094,
+      "peak_within_20_mg_dl_pct": 41.06280193236715,
+      "peak_time_mae_minutes": 34.08212560386473,
+      "meals": 207
+    },
+    "image_occlusion_probe": {
+      "trajectory_mae_mg_dl": 31.2785701751709,
+      "trajectory_rmse_mg_dl": 44.540592193603516,
+      "peak_mae_mg_dl": 46.28846740722656,
+      "peak_within_20_mg_dl_pct": 27.053140096618357,
+      "peak_time_mae_minutes": 29.951690821256037,
+      "meals": 207
+    }
+  },
+  "offline_calibration": {
+    "calibration_meals_per_person": 3,
+    "memory_frozen": true,
+    "evaluation": {
+      "persistence": {
+        "trajectory_mae_mg_dl": 32.16209411621094,
+        "trajectory_rmse_mg_dl": 45.727298736572266,
+        "peak_mae_mg_dl": 54.968814849853516,
+        "peak_within_20_mg_dl_pct": 20.43010752688172,
+        "peak_time_mae_minutes": 74.2741935483871,
+        "meals": 186
+      },
+      "population_response": {
+        "trajectory_mae_mg_dl": 27.748258590698242,
+        "trajectory_rmse_mg_dl": 37.93806457519531,
+        "peak_mae_mg_dl": 34.3154182434082,
+        "peak_within_20_mg_dl_pct": 44.086021505376344,
+        "peak_time_mae_minutes": 36.53225806451613,
+        "meals": 186
+      },
+      "history_ridge": {
+        "trajectory_mae_mg_dl": 27.79576301574707,
+        "trajectory_rmse_mg_dl": 38.07210922241211,
+        "peak_mae_mg_dl": 35.99580764770508,
+        "peak_within_20_mg_dl_pct": 43.01075268817204,
+        "peak_time_mae_minutes": 35.43010752688172,
+        "meals": 186
+      },
+      "food_ridge": {
+        "trajectory_mae_mg_dl": 26.74666404724121,
+        "trajectory_rmse_mg_dl": 36.917545318603516,
+        "peak_mae_mg_dl": 33.04082489013672,
+        "peak_within_20_mg_dl_pct": 44.086021505376344,
+        "peak_time_mae_minutes": 34.35483870967742,
+        "meals": 186
+      },
+      "food_trees": {
+        "trajectory_mae_mg_dl": 25.06056458095051,
+        "trajectory_rmse_mg_dl": 34.35113546716286,
+        "peak_mae_mg_dl": 30.828680545345733,
+        "peak_within_20_mg_dl_pct": 45.16129032258064,
+        "peak_time_mae_minutes": 33.68279569892473,
+        "meals": 186
+      },
+      "image_lstm": {
+        "trajectory_mae_mg_dl": 27.52855682373047,
+        "trajectory_rmse_mg_dl": 37.42051696777344,
+        "peak_mae_mg_dl": 32.892417907714844,
+        "peak_within_20_mg_dl_pct": 42.473118279569896,
+        "peak_time_mae_minutes": 33.52150537634409,
+        "meals": 186
+      },
+      "image_occlusion_probe": {
+        "trajectory_mae_mg_dl": 30.652976989746094,
+        "trajectory_rmse_mg_dl": 43.606082916259766,
+        "peak_mae_mg_dl": 45.7437744140625,
+        "peak_within_20_mg_dl_pct": 26.881720430107524,
+        "peak_time_mae_minutes": 29.758064516129032,
+        "meals": 186
+      },
+      "offline_personalized_image_lstm": {
+        "trajectory_mae_mg_dl": 25.38489532470703,
+        "trajectory_rmse_mg_dl": 35.035518646240234,
+        "peak_mae_mg_dl": 31.229660034179688,
+        "peak_within_20_mg_dl_pct": 42.473118279569896,
+        "peak_time_mae_minutes": 30.99462365591398,
+        "meals": 186
+      }
+    }
+  },
+  "participant_macro_peak_mae": {
+    "food_ridge": 35.966339111328125,
+    "food_trees": 32.843434495865075,
+    "history_ridge": 38.532714298793245,
+    "image_lstm": 34.82290376935686,
+    "image_occlusion_probe": 48.6190436226981,
+    "persistence": 57.902317319597515,
+    "population_response": 37.120953696114675
+  },
+  "personalization_peak_mae_reduction_pct": 5.055140300723104,
+  "personalization_reduction_95pct_ci": [
+    -0.34064712971448896,
+    10.490915560722351
+  ],
+  "training_evaluation_seconds": 2.5085070420755073,
+  "status": "single-seed research benchmark; no clinical validation"
+}

@@ -1,0 +1,26 @@
+{
+  "eligible_meals": 1342,
+  "participants": 45,
+  "cohort_participants": {
+    "prediabetes": 16,
+    "healthy": 15,
+    "type2_diabetes": 14
+  },
+  "excluded": {
+    "missing_start_photo": 51,
+    "overlapping_meal": 251,
+    "missing_macros": 1,
+    "incomplete_cgm": 49,
+    "implausible_macros": 12
+  },
+  "sensor": "Dexcom GL",
+  "step_minutes": 5,
+  "history_minutes": [
+    -60,
+    -5
+  ],
+  "forecast_minutes": [
+    5,
+    120
+  ]
+}

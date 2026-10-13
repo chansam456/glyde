@@ -1,0 +1,308 @@
+{
+  "version": "binary diabetes flag comparison",
+  "seed": 42,
+  "split": {
+    "train": [
+      1,
+      3,
+      4,
+      5,
+      7,
+      8,
+      11,
+      12,
+      13,
+      14,
+      16,
+      17,
+      19,
+      21,
+      22,
+      23,
+      27,
+      28,
+      29,
+      31,
+      32,
+      33,
+      35,
+      36,
+      38,
+      41,
+      42,
+      43,
+      44,
+      48,
+      49
+    ],
+    "validation": [
+      2,
+      10,
+      15,
+      26,
+      30,
+      34,
+      39
+    ],
+    "test": [
+      6,
+      9,
+      18,
+      20,
+      45,
+      46,
+      47
+    ]
+  },
+  "split_meals": {
+    "train": 923,
+    "validation": 212,
+    "test": 207
+  },
+  "group_split_counts": {
+    "non_diabetic": {
+      "train": {
+        "participants": 21,
+        "meals": 634
+      },
+      "validation": {
+        "participants": 5,
+        "meals": 155
+      },
+      "test": {
+        "participants": 5,
+        "meals": 157
+      }
+    },
+    "diabetic": {
+      "train": {
+        "participants": 10,
+        "meals": 289
+      },
+      "validation": {
+        "participants": 2,
+        "meals": 57
+      },
+      "test": {
+        "participants": 2,
+        "meals": 50
+      }
+    }
+  },
+  "flag_definition": {
+    "0": "healthy or prediabetes",
+    "1": "type2_diabetes"
+  },
+  "feature_order": [
+    "Carbs",
+    "Protein",
+    "Fat",
+    "Fiber",
+    "starting_glucose_mg_dl",
+    "diabetes_flag"
+  ],
+  "selected_model": "binary_flag",
+  "selected_estimators": {
+    "pooled": "extra_trees",
+    "binary_flag": "extra_trees",
+    "non_diabetic": "extra_trees",
+    "diabetic": "extra_trees"
+  },
+  "validation": {
+    "pooled": {
+      "ridge": {
+        "trajectory_mae_mg_dl": 30.621919631958008,
+        "trajectory_rmse_mg_dl": 45.62801742553711,
+        "peak_mae_mg_dl": 37.07642364501953,
+        "peak_within_20_mg_dl_pct": 45.75471698113208,
+        "peak_time_mae_minutes": 27.216981132075475,
+        "meals": 212
+      },
+      "extra_trees": {
+        "trajectory_mae_mg_dl": 27.57352049194624,
+        "trajectory_rmse_mg_dl": 40.37135820281474,
+        "peak_mae_mg_dl": 34.3743688754314,
+        "peak_within_20_mg_dl_pct": 49.528301886792455,
+        "peak_time_mae_minutes": 29.504716981132077,
+        "meals": 212
+      }
+    },
+    "binary_flag": {
+      "ridge": {
+        "trajectory_mae_mg_dl": 28.436241149902344,
+        "trajectory_rmse_mg_dl": 42.618438720703125,
+        "peak_mae_mg_dl": 35.8018798828125,
+        "peak_within_20_mg_dl_pct": 47.16981132075472,
+        "peak_time_mae_minutes": 23.278301886792452,
+        "meals": 212
+      },
+      "extra_trees": {
+        "trajectory_mae_mg_dl": 26.395950832315656,
+        "trajectory_rmse_mg_dl": 38.48269593810826,
+        "peak_mae_mg_dl": 33.41337010713838,
+        "peak_within_20_mg_dl_pct": 47.64150943396226,
+        "peak_time_mae_minutes": 24.716981132075475,
+        "meals": 212
+      }
+    },
+    "non_diabetic": {
+      "ridge": {
+        "trajectory_mae_mg_dl": 20.870643615722656,
+        "trajectory_rmse_mg_dl": 27.301525115966797,
+        "peak_mae_mg_dl": 23.323261260986328,
+        "peak_within_20_mg_dl_pct": 56.774193548387096,
+        "peak_time_mae_minutes": 21.64516129032258,
+        "meals": 155
+      },
+      "extra_trees": {
+        "trajectory_mae_mg_dl": 20.17678897051053,
+        "trajectory_rmse_mg_dl": 27.131504771128704,
+        "peak_mae_mg_dl": 23.05828769883862,
+        "peak_within_20_mg_dl_pct": 56.12903225806451,
+        "peak_time_mae_minutes": 23.70967741935484,
+        "meals": 155
+      }
+    },
+    "diabetic": {
+      "ridge": {
+        "trajectory_mae_mg_dl": 46.00288391113281,
+        "trajectory_rmse_mg_dl": 63.657379150390625,
+        "peak_mae_mg_dl": 66.41234588623047,
+        "peak_within_20_mg_dl_pct": 24.561403508771928,
+        "peak_time_mae_minutes": 32.10526315789474,
+        "meals": 57
+      },
+      "extra_trees": {
+        "trajectory_mae_mg_dl": 43.47596758386512,
+        "trajectory_rmse_mg_dl": 59.37588966176585,
+        "peak_mae_mg_dl": 60.71472695613728,
+        "peak_within_20_mg_dl_pct": 28.07017543859649,
+        "peak_time_mae_minutes": 31.842105263157894,
+        "meals": 57
+      }
+    }
+  },
+  "test": {
+    "pooled": {
+      "trajectory_mae_mg_dl": 25.78593115081017,
+      "trajectory_rmse_mg_dl": 35.28208124599685,
+      "peak_mae_mg_dl": 31.213459676909142,
+      "peak_within_20_mg_dl_pct": 43.96135265700483,
+      "peak_time_mae_minutes": 33.526570048309175,
+      "meals": 207
+    },
+    "binary_flag": {
+      "trajectory_mae_mg_dl": 25.74679624732966,
+      "trajectory_rmse_mg_dl": 35.568296522856286,
+      "peak_mae_mg_dl": 31.39726402195707,
+      "peak_within_20_mg_dl_pct": 46.3768115942029,
+      "peak_time_mae_minutes": 34.8792270531401,
+      "meals": 207
+    },
+    "separate_models": {
+      "trajectory_mae_mg_dl": 25.717920303344727,
+      "trajectory_rmse_mg_dl": 35.55780029296875,
+      "peak_mae_mg_dl": 31.378299713134766,
+      "peak_within_20_mg_dl_pct": 44.927536231884055,
+      "peak_time_mae_minutes": 34.830917874396135,
+      "meals": 207
+    }
+  },
+  "cohort_test": {
+    "healthy": {
+      "pooled": {
+        "trajectory_mae_mg_dl": 19.093900645251143,
+        "trajectory_rmse_mg_dl": 25.591997902733645,
+        "peak_mae_mg_dl": 20.92251997409759,
+        "peak_within_20_mg_dl_pct": 50.76923076923077,
+        "peak_time_mae_minutes": 30.615384615384613,
+        "meals": 65
+      },
+      "binary_flag": {
+        "trajectory_mae_mg_dl": 18.213858723075774,
+        "trajectory_rmse_mg_dl": 24.413349773344354,
+        "peak_mae_mg_dl": 20.472526014763538,
+        "peak_within_20_mg_dl_pct": 55.38461538461539,
+        "peak_time_mae_minutes": 30.692307692307693,
+        "meals": 65
+      },
+      "separate_models": {
+        "trajectory_mae_mg_dl": 17.971120834350586,
+        "trajectory_rmse_mg_dl": 24.105480194091797,
+        "peak_mae_mg_dl": 20.305011749267578,
+        "peak_within_20_mg_dl_pct": 55.38461538461539,
+        "peak_time_mae_minutes": 30.076923076923077,
+        "meals": 65
+      }
+    },
+    "prediabetes": {
+      "pooled": {
+        "trajectory_mae_mg_dl": 26.73665303314858,
+        "trajectory_rmse_mg_dl": 36.483516041546956,
+        "peak_mae_mg_dl": 32.40725194206076,
+        "peak_within_20_mg_dl_pct": 45.65217391304348,
+        "peak_time_mae_minutes": 35.65217391304348,
+        "meals": 92
+      },
+      "binary_flag": {
+        "trajectory_mae_mg_dl": 27.25257519584444,
+        "trajectory_rmse_mg_dl": 37.46746120477709,
+        "peak_mae_mg_dl": 34.77819625501085,
+        "peak_within_20_mg_dl_pct": 43.47826086956522,
+        "peak_time_mae_minutes": 39.02173913043478,
+        "meals": 92
+      },
+      "separate_models": {
+        "trajectory_mae_mg_dl": 27.329565048217773,
+        "trajectory_rmse_mg_dl": 37.50849914550781,
+        "peak_mae_mg_dl": 34.85900115966797,
+        "peak_within_20_mg_dl_pct": 41.30434782608695,
+        "peak_time_mae_minutes": 39.184782608695656,
+        "meals": 92
+      }
+    },
+    "type2_diabetes": {
+      "pooled": {
+        "trajectory_mae_mg_dl": 32.736242544534235,
+        "trajectory_rmse_mg_dl": 43.04665754581615,
+        "peak_mae_mg_dl": 42.39510352268517,
+        "peak_within_20_mg_dl_pct": 32.0,
+        "peak_time_mae_minutes": 33.4,
+        "meals": 50
+      },
+      "binary_flag": {
+        "trajectory_mae_mg_dl": 32.768981763592514,
+        "trajectory_rmse_mg_dl": 43.35553776511547,
+        "peak_mae_mg_dl": 39.3785081224897,
+        "peak_within_20_mg_dl_pct": 40.0,
+        "peak_time_mae_minutes": 32.7,
+        "meals": 50
+      },
+      "separate_models": {
+        "trajectory_mae_mg_dl": 32.82332229614258,
+        "trajectory_rmse_mg_dl": 43.47836685180664,
+        "peak_mae_mg_dl": 39.369083404541016,
+        "peak_within_20_mg_dl_pct": 38.0,
+        "peak_time_mae_minutes": 33.0,
+        "meals": 50
+      }
+    }
+  },
+  "training_feature_min": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    40.0,
+    0.0
+  ],
+  "training_feature_max": [
+    282.0,
+    148.0,
+    110.0,
+    100.0,
+    319.0,
+    1.0
+  ],
+  "training_evaluation_seconds": 0.9747197079705074
+}
