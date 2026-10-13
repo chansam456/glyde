@@ -11,3 +11,8 @@ artifacts/
 .env.*
 !.env.example
 *.pem
+
+# Keep project notes local; only methods and results are versioned.
+*.md
+!docs/METHODS.md
+!docs/RESULTS.md
