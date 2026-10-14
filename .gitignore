@@ -12,7 +12,7 @@ artifacts/
 !.env.example
 *.pem
 
-# Keep project notes local; only methods and results are versioned.
-*.md
+# Ignore Markdown files at every depth, including .MD; keep these two reports.
+*.[mM][dD]
 !docs/METHODS.md
 !docs/RESULTS.md
