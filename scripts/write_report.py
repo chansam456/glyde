@@ -127,7 +127,8 @@ This project demonstrates a complete evaluated pipeline and honest model compari
 
 ## Project title
 
-**Glucolens — Multimodal Meal-to-Glucose Forecasting**  
+**Glyde — Multimodal Meal-to-Glucose Forecasting**
+
 Python · PyTorch · EfficientNet · LSTM · scikit-learn · Streamlit
 
 ## Recommended bullets

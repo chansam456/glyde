@@ -1,11 +1,11 @@
 import numpy as np
 import pandas as pd
 import torch
-from glucolens.data import sample_window
-from glucolens.experiment import split_people
-from glucolens.metrics import metrics
-from glucolens.model import MealLSTM
-from glucolens.personalization import SimilarityMemory
+from glyde.data import sample_window
+from glyde.experiment import split_people
+from glyde.metrics import metrics
+from glyde.model import MealLSTM
+from glyde.personalization import SimilarityMemory
 
 
 def test_window_rejects_long_gap_and_extrapolation():

@@ -62,7 +62,7 @@ def run(prepared, output, epochs=80, seed=42, profile="quick", max_minutes=45, d
     signature = hashlib.sha256((prepared / "meals.csv").read_bytes()).hexdigest()
     embed_metadata = json.loads((prepared / "embeddings.json").read_text())
     if embed_metadata["meal_manifest_sha256"] != signature or len(e) != len(meals):
-        raise ValueError("Embeddings do not match meals; rerun glucolens embed")
+        raise ValueError("Embeddings do not match meals; rerun glyde embed")
     split = split_people(meals.participant.to_numpy(), seed, meals.cohort.to_numpy())
     save_split(meals, split, output)
     indices = {key: np.flatnonzero(meals.participant.isin(value)) for key, value in split.items()}

@@ -74,8 +74,8 @@ Photo-model initialization changes because its head has one additional input. Th
 The nutrient comparison trained/evaluated in {food['training_evaluation_seconds']:.2f} seconds; the flag-enabled neural run took {photo['training_evaluation_seconds']:.2f} seconds, excluding interpreter startup and previously cached image extraction. Both remain well below the one-hour training budget.
 
 ```bash
-rtk proxy .venv/bin/glucolens train-status
-rtk proxy .venv/bin/glucolens train --diabetes-flag
+rtk proxy .venv/bin/glyde train-status
+rtk proxy .venv/bin/glyde train --diabetes-flag
 rtk proxy .venv/bin/python scripts/write_status_report.py
 rtk proxy .venv/bin/python -m pytest -q
 rtk proxy .venv/bin/streamlit run app.py

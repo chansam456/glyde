@@ -3,7 +3,7 @@ import json
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Glucolens reproducible research pipeline")
+    parser = argparse.ArgumentParser(description="Glyde reproducible research pipeline")
     sub = parser.add_subparsers(dest="command", required=True)
     prep = sub.add_parser("prepare")
     prep.add_argument("--raw", default="data/raw")

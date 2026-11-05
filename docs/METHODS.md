@@ -1,6 +1,6 @@
 # Methods and evaluation protocol
 
-The original protocol below is retained for its pooled benchmark. The current app also uses diabetes-status conditioning, described in [DIABETES_FLAG.md](DIABETES_FLAG.md). Both versions preserve the same participant split and evaluation windows; the new status is an additional known input, not a diagnostic prediction.
+The original protocol below describes the pooled benchmark. The current app also uses known diabetes status as an input, as described in the [README](../README.md). Both versions preserve the same participant split and evaluation windows.
 
 ## Task and input contract
 

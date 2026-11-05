@@ -12,7 +12,8 @@ artifacts/
 !.env.example
 *.pem
 
-# Ignore Markdown files at every depth, including .MD; keep these two reports.
+# Ignore local Markdown files and keep public project documentation.
 *.[mM][dD]
+!/README.md
 !docs/METHODS.md
 !docs/RESULTS.md

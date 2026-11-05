@@ -4,9 +4,9 @@ import numpy as np
 import pandas as pd
 import pytest
 import torch
-from glucolens.status import diabetes_flags, validate_flag
-from glucolens.inference import predict_food
-from glucolens.model import MealLSTM
+from glyde.status import diabetes_flags, validate_flag
+from glyde.inference import predict_food
+from glyde.model import MealLSTM
 
 
 def test_flag_mapping_and_validation():

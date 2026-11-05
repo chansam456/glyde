@@ -5,10 +5,10 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 from PIL import Image
-from glucolens.inference import predict_food, predict_image
+from glyde.inference import predict_food, predict_image
 
-st.set_page_config(page_title="Glucolens", page_icon="🥗", layout="wide")
-st.title("Glucolens")
+st.set_page_config(page_title="Glyde", page_icon="🥗", layout="wide")
+st.title("Glyde")
 st.caption("Explore how a meal may affect the next two hours of glucose.")
 st.info("Research prototype trained on CGMacros. Predictions are estimates, not guidance for medication or insulin dosing.")
 diabetes_flag = st.sidebar.radio("Diabetes status", [0, 1],
@@ -26,7 +26,7 @@ def display_curve(curve, baseline):
     c.metric("Time of predicted peak", f"{(curve.argmax() + 1) * 5} min")
     frame = pd.DataFrame({"Minutes after meal": np.arange(5, 121, 5), "Glucose (mg/dL)": curve})
     st.line_chart(frame.set_index("Minutes after meal"))
-    st.download_button("Download forecast", frame.to_csv(index=False), "glucolens_forecast.csv", "text/csv")
+    st.download_button("Download forecast", frame.to_csv(index=False), "glyde_forecast.csv", "text/csv")
 
 
 with food_tab:
